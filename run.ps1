@@ -549,11 +549,7 @@ function downloadSp([string]$DownloadFolder) {
     
     try { 
         if ($curl_check) {
-            $stcode = curl.exe -Is -w "%{http_code} \n" -o NUL -k $web_Url --retry 2 --ssl-no-revoke
-            if ($stcode.trim() -ne "200") {
-                Write-Host "Curl error code: $stcode"; throw
-            }
-            curl.exe -q -k $web_Url -o $local_Url --progress-bar --retry 3 --ssl-no-revoke
+            curl.exe -q -f -L -k $web_Url -o $local_Url --progress-bar --retry 3 --ssl-no-revoke
             return
         }
         if (!($curl_check ) -and $null -ne (Get-Module -Name BitsTransfer -ListAvailable)) {
