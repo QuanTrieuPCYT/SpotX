@@ -424,7 +424,7 @@ if (!($version -and $version -match $match_v)) {
     }
     else {  
         # latest tested version for Win 10-12 
-        $onlineFull = "1.2.84.477.gcfdf84e8-2359"
+        $onlineFull = "1.2.81.264.gb4ad4efa-1866"
     }
 }
 else {
@@ -540,7 +540,7 @@ function downloadSp([string]$DownloadFolder) {
     $short = [Version]"$($versionParts[0]).$($versionParts[1]).$($versionParts[2])"
     $arch = if ($short -le $max_x86) { "win32-x86" } else { "win32-x86_64" }
 
-    $web_Url = "https://upgrade.scdn.co/upgrade/client/$arch/spotify_installer-$onlineFull.exe"
+    $web_Url = "https://stash.qtpc.tech/spotify/$arch/spotify_installer-$onlineFull.exe"
     $local_Url = Join-Path $DownloadFolder 'SpotifySetup.exe'
     $web_name_file = "SpotifySetup.exe"
 
