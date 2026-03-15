@@ -58,7 +58,7 @@ or
 #### Run The following command in PowerShell:
 
 ```ps1
-iex "& { $(iwr -useb 'https://raw.githubusercontent.com/SpotX-Official/SpotX/refs/heads/main/run.ps1') } -new_theme"
+iex "& { $(iwr -useb 'https://raw.githubusercontent.com/QuanTrieuPCYT/SpotX/refs/heads/main/run.ps1') } -new_theme"
 ```
 
 #### mirror
